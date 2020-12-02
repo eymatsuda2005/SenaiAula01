@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+
 <head>
     <link rel="stylesheet" href="/css/Styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -8,34 +9,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Eduardo</title>
 </head>
+
 <body>
-<header class="header">
-    <div class="header-info">
-        <h3>Ola, o meu nome Eduardo Matsuda</h3>
-        <h4>Vivendo com muita intensidade a cada momento que Deus nos proporciona</h4>
-        <button type="button"class="btn">
-            <a href="#">Experiências</a>
-        </button>
-    </div>
-</header>
-<section class="section experiencie-sec">
-    <div class="section-header">Linguagem e Frameworks</div> 
-    <div class="experience-container"></div>  
-    <div class="experience-item"></div>
-    <span class="item-logo">
-        <img src="css/img/html-5.svg" alt="">
-    </span>
-    </div>
-    <div class="experience-item"></div>
-    <span class="item-logo">
-        <img src="css/img/css.svg" alt="">
-    </span>
-    </div>
-    <div class="experience-item"></div>
-    <span class="item-logo">
-        <img src="css/img/html-5.svg" alt="">
-    </span>
-    </div>
-</section>
+    <header class="header">
+        <div class="header-info">
+            <h3>Ola, o meu nome Eduardo Matsuda</h3>
+            <h4>Vivendo com muita intensidade a cada momento que Deus nos proporciona.</h4>
+            <button type="button" class="btn">
+                <a href="/#Experience">Experiencias</a>
+            </button>
+        </div>
+    </header>
+    <section id="Experience" class="section experiencie-sec">
+        <div class="section-header">Linguagem e Frameworks</div>
+        <div class="experience-container">
+            <div class="experience-item">
+                <span class="item-logo">
+                    <img src="css/img/html-5.svg" alt="">
+                </span>
+                <span class="item-name">html</span>
+            </div>
+            <div class="experience-item">
+                <span class="item-logo">
+                    <img src="css/img/css.svg" alt="">
+                </span>
+                <span class="item-name">css</span>
+            </div>
+            <div class="experience-item">
+                <span class="item-logo">
+                    <img src="css/img/javascript.svg" alt="">
+                </span>
+                <span class="item-name">JavaScript</span>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section contact-sec">
+        <div class="section-header">Contato</div>
+        <div class="contact-container">
+            <form id="contact-form">
+
+                <label for="name">Nome</label>
+                <input type="text" name="name">
+
+                <label for="email">Email</label>
+                <input type="text" name="email">
+
+                <label for="content">Mensagem</label>
+                <textarea name="content" id="content" placeholder="Escreva algo para mim"></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>
+
 </html>
