@@ -55,7 +55,7 @@ html, body{
         border-width: 4px;
         background-color: blueviolet;
      }
-     a{
+     .btn-a{
          text-decoration: none;
          color: white;
      }
@@ -143,4 +143,25 @@ html, body{
      }
      .contact-sec .section-header{
          color: white;
+     }
+     .footer{
+         background-color: #111111;
+         text-align: center;
+         padding: 2.5 em;
+         font-size: 30px;
+     }
+     .social-list{
+         list-style: none;
+         display: flex;
+         justify-content: center;
+         margin: 2em 0 0 ;
+         padding:  0;
+     }
+     .list-item{
+         margin:  0.5 em;
+     }
+     .item-link{
+         text-decoration:  none;
+         color: white;
+         padding: .5em;
      }
