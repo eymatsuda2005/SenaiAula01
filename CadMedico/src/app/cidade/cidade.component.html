@@ -26,6 +26,7 @@
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Estado</th>
+        <th scope="col">Opções</th>
         <td>
 
     </thead>
@@ -38,7 +39,7 @@
           <div class="btn-group">
             <button class="btn btn-danger" (click)="openModal(template)">Visualizar</button>
             <button class="btn btn-warning" (click)="selectCidade(cidade)">Editar</button>
-            <button class="btn btn-success">Excluir</button>
+            <button class="btn btn-success"(click)="deleteCidade(cidade.id)">Excluir</button>
           </div>
         </td>
       </tr>

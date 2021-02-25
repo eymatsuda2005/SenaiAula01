@@ -72,7 +72,7 @@ namespace CadMedicoApi.Controllers
         }
            return BadRequest();
     }
-    [HttpPut ("medicoId")]
+    [HttpPut ("{medicoId}")]
     public async Task<IActionResult> put(int medicoId, MedicoModel model){
     try
     {
@@ -101,7 +101,7 @@ namespace CadMedicoApi.Controllers
         if (medico == null) return NotFound();
         _repo.Delete(medico);
         if (await _repo.SaveChangesAsync()){
-           return Ok("Medico Deletado");
+           return Ok(new {message="Medico Deletado"});
         }
         
     }

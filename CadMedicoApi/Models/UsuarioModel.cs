@@ -18,6 +18,8 @@ namespace CadMedicoApi.Models
             public string Login { get; set; }
             public string Senha { get; set; }
             public int PrivilegioId { get; set; }
+            public UsuarioModel Usuarios { get; set; }
         }
+
 
     }

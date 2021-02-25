@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BsComponentRef } from 'ngx-bootstrap/component-loader';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Cidade } from '../models/Cidade';
+import { CidadesService } from '../services/Cidades.service';
 
 @Component({
   selector: 'app-cidade',
@@ -14,15 +15,10 @@ export class CidadeComponent implements OnInit {
   public selectedCidade: Cidade;
   public cidadeForm: FormGroup;
   public modalRef: BsModalRef;
-  public cidades = [
-    { id: '1', nome: 'Arapongas', estado: 'PR' },
-    { id: '2', nome: 'Apucarana', estado: 'PR' },
-    { id: '3', nome: 'Londrina', estado: 'PR' },
-    { id: '4', nome: 'Maringá', estado: 'PR' },
-    { id: '5', nome: 'São Paulo', estado: 'SP' },
-  ]
+  public cidades: Cidade[];
   createForm() {
     this.cidadeForm = this.fb.group({
+      id: [''],
       nome: ['', Validators.required],
       estado: ['', Validators.required],
     });
@@ -37,15 +33,49 @@ export class CidadeComponent implements OnInit {
   }
   back() {
     this.selectedCidade = null;
+    this.loadCidade();
+  }
+  saveCidade(cidade: Cidade){
+    this.cidadesService.edit(cidade).subscribe(
+      (retorno:Cidade)=> {
+        console.log(retorno);
+      },
+      (error:any)=> {
+        console.log(error);
+      }
+      );
+  }
+  loadCidade() {
+    this.cidadesService.getAll().subscribe(
+      (cidade: Cidade[]) => {
+        this.cidades = cidade;
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
   }
   submit() {
-    console.log(this.cidadeForm.value)
+    console.log(this.cidadeForm.value);
+    this.saveCidade(this.cidadeForm.value);
+    
   }
-  constructor(private fb: FormBuilder, private modalService: BsModalService) {
+  deleteCidade(id: number) {
+    this.cidadesService.delete(id).subscribe(
+      (modal: any) => {
+        this.loadCidade();
+        console.log(modal);
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
+  }
+  constructor(private fb: FormBuilder, private modalService: BsModalService, private cidadesService: CidadesService) {
     this.createForm();
   }
-
   ngOnInit(): void {
+    this.loadCidade();
   }
 
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yONMF1cgz0xj6EtclgbpXkQHPmiQUrZho22W4HQMFBNVh6vPcpd6gsc1C8j6ILWe4ltbDloyUe7sKOT1FdS4/w==",
+  "dgSpecHash": "K8HkGIR8GaOj79QK3tYj//LGHjN2YoFeKP67qTH9/DAqANYiJMWpWpu1I/JpU+NHpP8NKPbgg/eVOVLYbq5ToA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\CadMedicoApi.csproj",
+  "projectFilePath": "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\CadMedicoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eymat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\eymat\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.3\\microsoft.aspnetcore.jsonpatch.5.0.3.nupkg.sha512",

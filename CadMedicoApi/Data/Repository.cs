@@ -90,24 +90,35 @@ namespace CadMedicoApi.Data
                                 query = query.AsNoTracking().OrderBy(c => c.Id);
                                 return await query.ToArrayAsync();
             
-              }
-
-              public async Task<CidadeModel> GetCidadeModelById(int cidadeId, bool includeMedico){
-
-                    IQueryable<CidadeModel> query = _context.Cidades;
-
-                    if (includeMedico){
-                        query = query.Include(mc => mc.MedicoCidade)
-                                     .ThenInclude(m => m.Medico)
-                                     .ThenInclude(me => me.MedicoEspecialidade)
-                                     .ThenInclude(e => e.Especialidade);
-                    }
-                    query = query.AsNoTracking()
-                                .OrderBy(c => c.Id)
-                                .Where(c=> c.Id == cidadeId);
-                    return await query.FirstOrDefaultAsync();            
-
                 }
 
-}
+        public async Task<CidadeModel> GetCidadeModelById(int cidadeId, bool includeMedico)
+        {
+             IQueryable<CidadeModel> query = _context.Cidades;
+
+            if(includeMedico){
+                query = query.Include(mc => mc.MedicoCidade)
+                             .ThenInclude(m => m.Medico)
+                             .ThenInclude(me => me.MedicoEspecialidade)
+                             .ThenInclude(e => e.Especialidade);
+            }
+
+            query = query.AsNoTracking()
+                          .OrderBy(c => c.Id)
+                          .Where(c => c.Id == cidadeId);
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+        public Task<UsuarioModel> GetUsuarioModelById(int UsuarioId, bool includeUsuario)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<UsuarioModel[]> GetAllUsuarioModelAsync(bool includeUsuario)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+
 }

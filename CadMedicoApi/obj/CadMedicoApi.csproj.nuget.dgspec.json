@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\CadMedicoApi.csproj": {}
+    "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\CadMedicoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\CadMedicoApi.csproj": {
+    "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\CadMedicoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\CadMedicoApi.csproj",
+        "projectUniqueName": "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\CadMedicoApi.csproj",
         "projectName": "CadMedicoApi",
-        "projectPath": "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\CadMedicoApi.csproj",
+        "projectPath": "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\CadMedicoApi.csproj",
         "packagesPath": "C:\\Users\\eymat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eymat\\SenaiAula01\\CadMedicoApi\\obj\\",
+        "outputPath": "C:\\Users\\eymat\\Senai\\SenaiAula01-main\\CadMedicoApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\eymat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

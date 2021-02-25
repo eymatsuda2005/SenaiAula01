@@ -50,7 +50,7 @@
           <div class="btn-group">
             <button class="btn btn-danger"  (click)="openModal(template)">Visualizar</button>
             <button class="btn btn-warning" (click)="selectMedico(medicos)">Editar</button>
-            <button class="btn btn-success">Excluir</button>
+            <button class="btn btn-success"(click)="deleteMedico(medicos.id)">Excluir</button>
           </div>
         </td>
       </tr>
